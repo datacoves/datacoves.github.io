@@ -41,7 +41,7 @@ export default function Index() {
           mt="20"
         >
           <Heading mb={2} textAlign="center" fontSize={["3xl", "5xl", "6xl", "7xl"]} letterSpacing="tighter" fontWeight="extrabold">Open Source tools to adopt DataOps the right way</Heading>
-          <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">We see great analytics tools, but building a data stack based on solid foundations is an evergrowing challenge. Our mission is to <strong>integrate analytics tools using the best DataOps practices</strong> 💪.</Text>
+          <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">Building a data stack based on solid foundations is an evergrowing challenge. Our mission is to <strong>better integrate data services and promote best DataOps practices</strong> 💪.</Text>
 
           <Divider mb={12} mt={16} w='90%' alignSelf="center" />
 
