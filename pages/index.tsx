@@ -40,8 +40,8 @@ export default function Index() {
           maxWidth="1000px"
           mt="20"
         >
-          <Heading mb={2} textAlign="center" fontSize={["3xl", "5xl", "6xl", "7xl"]} letterSpacing="tighter" fontWeight="extrabold">Open Source tools for the Modern Data Stack</Heading>
-          <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">There are great open source analytics tools, but integrating them is an evergrowing challenge. Our mission is to connect them and <strong>make them available to everyone</strong> 💪.</Text>
+          <Heading mb={2} textAlign="center" fontSize={["3xl", "5xl", "6xl", "7xl"]} letterSpacing="tighter" fontWeight="extrabold">Open Source tools to adopt DataOps the right way</Heading>
+          <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">We see great analytics tools, but building a data stack based on solid foundations is an evergrowing challenge. Our mission is to <strong>integrate analytics tools using the best DataOps practices</strong> 💪.</Text>
 
           <Divider mb={12} mt={16} w='90%' alignSelf="center" />
 
@@ -52,7 +52,7 @@ export default function Index() {
             src="/img/dbt-coves.svg"
             alt='Dbt-coves'
           >
-            dbt-coves is the CLI tool for <Link href="https://getdbt.com">dbt</Link> that applies the <strong>datacoves</strong> practices. It can help you bootstrap your new dbt project, generate new models, and check for documentation and tests.
+            dbt-coves is the CLI tool for <Link href="https://getdbt.com">dbt</Link> that helps applying best practices. It can help you bootstrap your new dbt project, generate new models, and check for documentation or tests.
             </FeaturedProjectCard>
         </Flex>
       </Stack>
