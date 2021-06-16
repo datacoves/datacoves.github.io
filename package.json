@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "deploy": "gh-pages -t -d out -r https://github.com/datacoves/datacoves.github.io.git"
+    "deploy": "next build && next export && touch out/.nojekyll && gh-pages -t -d out -r https://github.com/datacoves/datacoves.github.io.git -u github-actions-bot <support+actions@github.com>"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",

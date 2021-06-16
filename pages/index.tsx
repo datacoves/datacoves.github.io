@@ -7,6 +7,7 @@ import {
   Flex,
   Stack,
   SimpleGrid,
+  HStack,
   Divider,
   Avatar,
   Link
@@ -68,14 +69,15 @@ export default function Index() {
 
           <Heading letterSpacing="tight" my={20} size="xl" fontWeight={700} as="h2" textAlign="center" w="100%">Who we are</Heading>
 
-          <SimpleGrid columns={[1, 1, 1, 3]} spacing={10} my={5} w="100%">
+          <Stack spacing={10} my={5} w="100%" direction={{base: 'column', lg: 'row'}} alignItems="center">
             <Flex
               direction="column"
               alignItems="center"
+              maxW="400px"
               rounded="md"
               padding="8"
               position="relative"
-              shadow={{ md: 'base' }}
+              shadow={'md'}
               transition="all 0.1s"
               _hover={{
                 boxShadow: boxShadowColor[colorMode],
@@ -88,10 +90,11 @@ export default function Index() {
             <Flex
               direction="column"
               alignItems="center"
+              maxW="400px"
               rounded="md"
               padding="8"
               position="relative"
-              shadow={{ md: 'base' }}
+              shadow={'md'}
               transition="all 0.1s"
               _hover={{
                 boxShadow: boxShadowColor[colorMode],
@@ -104,10 +107,11 @@ export default function Index() {
             <Flex
               direction="column"
               alignItems="center"
+              maxW="400px"
               rounded="md"
               padding="8"
               position="relative"
-              shadow={{ md: 'base' }}
+              shadow={'md'}
               transition="all 0.1s"
               _hover={{
                 boxShadow: boxShadowColor[colorMode],
@@ -117,7 +121,7 @@ export default function Index() {
               <Heading size="md" fontWeight="extrabold" letterSpacing="tight" my={3}>Sebastian Sassi</Heading>
               <Text fontSize="small" textAlign="center">Co-founded <Link color={linkColor[colorMode]} href="https://convexa.ai">Convexa</Link> to help companies deliver actionable insights via NLP and voice assistants, +15 years building web and mobile apps.</Text>
             </Flex>
-          </SimpleGrid>
+          </Stack>
         </Flex>
       </Stack>
     </Container>

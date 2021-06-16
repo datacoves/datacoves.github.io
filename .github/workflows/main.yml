@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        run: |
+          npm next build
+          npm next export
+          touch out/.nojekyll
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          gh-pages -t -d out -u github-actions-bot <support+actions@github.com>
