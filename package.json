@@ -6,8 +6,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "deploy": "gh-pages -d out",
-    "dd": "git push origin :gh-pages && git subtree push --prefix out origin gh-pages"
+    "deploy": "gh-pages -t -d out -r https://github.com/datacoves/datacoves.github.io.git"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",

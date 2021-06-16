@@ -35,6 +35,7 @@ const FeaturedProjectCard = ({ title, href, children, src, alt }) => {
                 textDecoration: 'none'
             }}
             mt={4}
+            mb={12}
             onMouseOver={() => setOpacity(1)}
             onMouseLeave={() => setOpacity(0)}
         >

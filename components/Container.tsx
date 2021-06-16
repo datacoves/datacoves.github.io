@@ -3,13 +3,16 @@ import {
     useColorMode,
     Link,
     Flex,
-    Box
+    Box,
+    HStack,
+    Tooltip
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import styled from '@emotion/styled'
 
 import DarkModeSwitch from '../components/DarkModeSwitch'
 import { Logo } from '../components/Logo'
+import { GithubIcon } from '../components/icons/Github'
 
 const Container = ({ children }) => {
     const { colorMode } = useColorMode()
@@ -41,7 +44,6 @@ const Container = ({ children }) => {
         <>
             <StickyNav
                 flexDirection="row"
-                justifyContent="space-between"
                 alignItems="center"
                 maxWidth="1100px"
                 minWidth="356px"
@@ -54,13 +56,16 @@ const Container = ({ children }) => {
                 mb={[0, 0, 8]}
                 mx="auto"
             >
-                <Box>
+                <Box flex={1}>
                     <NextLink href="/">
                         <Link><Logo _hover={{ filter: colorMode === 'light' ? 'invert(0.3)' : 'invert(0.8)', transition: "all 0.1s" }} w={150}
                         filter={colorMode === 'light' ? 'none' : 'invert(1)'} /></Link>
                     </NextLink>
                 </Box>
-                <DarkModeSwitch />
+                <HStack spacing={2}>
+                    <Tooltip label="Github" hasArrow aria-label="GitHub link"><Link isExternal href="https://github.com/datacoves" bg={colorMode === 'light' ? 'gray.100' : 'whiteAlpha.200'} color={color[colorMode]} py={2} px={3} borderRadius={5} _hover={{backgroundColor: colorMode === 'light' ? 'gray.200' : 'whiteAlpha.300'}}><GithubIcon boxSize={5} color={color[colorMode]} /></Link></Tooltip>
+                    <Tooltip label="Toggle Dark mode" hasArrow aria-label="Toggle Dark Mode"><Box><DarkModeSwitch /></Box></Tooltip>
+                </HStack>
             </StickyNav >
             <Flex
                 as="main"
