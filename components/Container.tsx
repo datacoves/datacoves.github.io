@@ -5,7 +5,8 @@ import {
     Flex,
     Box,
     HStack,
-    Tooltip
+    Tooltip,
+    IconButton
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import styled from '@emotion/styled'
@@ -63,7 +64,9 @@ const Container = ({ children }) => {
                     </NextLink>
                 </Box>
                 <HStack spacing={2}>
-                    <Tooltip label="Github" hasArrow aria-label="GitHub link"><Link isExternal href="https://github.com/datacoves" bg={colorMode === 'light' ? 'gray.100' : 'whiteAlpha.200'} color={color[colorMode]} py={2} px={3} borderRadius={5} _hover={{backgroundColor: colorMode === 'light' ? 'gray.200' : 'whiteAlpha.300'}}><GithubIcon boxSize={5} color={color[colorMode]} /></Link></Tooltip>
+                    {/* <Tooltip label="Github" hasArrow aria-label="GitHub link">
+                        <IconButton aria-label="GitHub link" target="_blank" as="a" href="https://github.com/datacoves" icon={<GithubIcon boxSize={5} color={color[colorMode]} />} />
+                    </Tooltip> */}
                     <Tooltip label="Toggle Dark mode" hasArrow aria-label="Toggle Dark Mode"><Box><DarkModeSwitch /></Box></Tooltip>
                 </HStack>
             </StickyNav >

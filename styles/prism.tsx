@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { theme } from '@chakra-ui/react'
 
 const prismBaseTheme = css`
-  @import url('https://fonts.googleapis.com/css2?family=Inter:400,700,800,800');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:400,500,700,800,800');
   code {
     white-space: pre;
   }

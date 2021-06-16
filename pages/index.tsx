@@ -10,16 +10,17 @@ import {
   HStack,
   Divider,
   Avatar,
-  Link
+  Link,
+  Button
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
-import FeaturedProjectCard from '../components/FeaturedProjectCard'
+import { GithubIcon } from '../components/icons/Github'
 
 export default function Index() {
   const { colorMode } = useColorMode()
   const colorSecondary = {
-    light: 'gray.700',
+    light: 'gray.600',
     dark: 'gray.400'
   }
   const iconColor = {
@@ -53,29 +54,18 @@ export default function Index() {
           mt="20"
         >
           <Heading mb={2} textAlign="center" fontSize={["3xl", "5xl", "6xl", "7xl"]} letterSpacing="tighter" fontWeight="extrabold">Do DataOps the right way and deliver reliable insights <i>faster</i></Heading>
-          <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">Building a data stack based on solid foundations is an evergrowing challenge. Our mission is to <strong>integrate the leading data tools and promote DataOps best practices</strong> 💪</Text>
+          <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">Building a data stack based on solid foundations is an evergrowing challenge. Let's connect the leading data tools while promoting DataOps best practices 💪</Text>
 
-          <Divider mb={12} mt={16} w='70%' alignSelf="center" />
+          <HStack margin="auto" mt={10} mb={10} spacing={5}>
+            <Button as="a" href="https://github.com/datacoves" bg="black" color="white" fontWeight="500" px={6} border="1px solid black" _hover={{backgroundColor: "white", color: "black"}}>Start with dbt-coves</Button>
+            <Button as="a" href="https://github.com/datacoves" variant="outline" fontWeight="500" px={6}><GithubIcon boxSize={5} color={iconColor[colorMode]} mr={2} />GitHub repos</Button>
+          </HStack>
+          <Text width="100%" align="center" mb={20}>License: MIT</Text>
 
-          <Box maxW="500px" margin="auto" mt={20} mb={12}>
-            <Heading letterSpacing="tight" size="lg" fontWeight={700} as="h2" textAlign="center" w="100%">Open Source Software</Heading>
-            <Text fontSize="md" mt={4} color="gray.700" textAlign="center">Giving back open, free and easy-to-use software.</Text>
-          </Box>
-          
-          <FeaturedProjectCard
-            title="dbt-coves"
-            href="https://github.com/datacoves/dbt-coves"
-            src="/img/dbt-coves.svg"
-            alt='Dbt-coves'
-          >
-            dbt-coves is the CLI tool for dbt that helps applying datacoves recommended practices. It can help you bootstrap your new dbt project, generate new models, check for docs or tests with zero config.
-          </FeaturedProjectCard>
+          <Heading mt={20} mb={2} letterSpacing="tight" size="xl" fontWeight={700} as="h2" textAlign="center" w="100%">Who we are</Heading>
+          <Text width="100%" align="center" mb={10}>We're in a mission to make the Analytics Engineer life easier.</Text>
 
-          <Box maxW="500px" margin="auto" mt={20} mb={12}>
-            <Heading letterSpacing="tight" size="xl" fontWeight={700} as="h2" textAlign="center" w="100%">Who we are</Heading>
-          </Box>
-
-          <Stack spacing={10} my={5} w="100%" direction={{base: 'column', lg: 'row'}} alignItems="center">
+          <Stack spacing={10} my={20} w="100%" direction={{base: 'column', lg: 'row'}} alignItems="center">
             <Flex
               direction="column"
               alignItems="center"
