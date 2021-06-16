@@ -20,5 +20,6 @@ jobs:
           yarn next build
           yarn next export
           touch out/.nojekyll
+          echo 'datacoves.com' > out/CNAME
           git remote set-url origin "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           yarn gh-pages -t -d out -u "github-actions-bot <support+actions@github.com>"
