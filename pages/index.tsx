@@ -61,6 +61,7 @@ export default function Index() {
             <Heading letterSpacing="tight" size="lg" fontWeight={700} as="h2" textAlign="center" w="100%">Open Source Software</Heading>
             <Text fontSize="md" mt={4} color="gray.700" textAlign="center">Giving back open, free and easy-to-use software.</Text>
           </Box>
+          
           <FeaturedProjectCard
             title="dbt-coves"
             href="https://github.com/datacoves/dbt-coves"

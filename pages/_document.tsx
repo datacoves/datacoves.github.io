@@ -6,7 +6,6 @@ export default class MyDocument extends NextDocument {
         return (
             <Html lang="en">
                 <Head>
-                    <link href="https://fonts.googleapis.com/css2?family=Inter:400,700,800,800i" rel="stylesheet" />
                 </Head>
                 <body>
                     <ColorModeScript />
