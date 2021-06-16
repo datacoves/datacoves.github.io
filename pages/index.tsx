@@ -55,9 +55,12 @@ export default function Index() {
           <Heading mb={2} textAlign="center" fontSize={["3xl", "5xl", "6xl", "7xl"]} letterSpacing="tighter" fontWeight="extrabold">Do DataOps the right way and deliver reliable insights <i>faster</i></Heading>
           <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">Building a data stack based on solid foundations is an evergrowing challenge. Our mission is to <strong>integrate the leading data tools and promote DataOps best practices</strong> 💪</Text>
 
-          <Divider mb={12} mt={16} w='90%' alignSelf="center" />
+          <Divider mb={12} mt={16} w='70%' alignSelf="center" />
 
-          <Heading letterSpacing="tight" my={20} size="xl" fontWeight={700} as="h2" textAlign="center" w="100%">Open Source Software</Heading>
+          <Box maxW="500px" margin="auto" mt={20} mb={12}>
+            <Heading letterSpacing="tight" size="lg" fontWeight={700} as="h2" textAlign="center" w="100%">Open Source Software</Heading>
+            <Text fontSize="md" mt={4} color="gray.700" textAlign="center">Giving back open, free and easy-to-use software.</Text>
+          </Box>
           <FeaturedProjectCard
             title="dbt-coves"
             href="https://github.com/datacoves/dbt-coves"
@@ -67,7 +70,9 @@ export default function Index() {
             dbt-coves is the CLI tool for dbt that helps applying datacoves recommended practices. It can help you bootstrap your new dbt project, generate new models, check for docs or tests with zero config.
           </FeaturedProjectCard>
 
-          <Heading letterSpacing="tight" my={20} size="xl" fontWeight={700} as="h2" textAlign="center" w="100%">Who we are</Heading>
+          <Box maxW="500px" margin="auto" mt={20} mb={12}>
+            <Heading letterSpacing="tight" size="xl" fontWeight={700} as="h2" textAlign="center" w="100%">Who we are</Heading>
+          </Box>
 
           <Stack spacing={10} my={5} w="100%" direction={{base: 'column', lg: 'row'}} alignItems="center">
             <Flex
@@ -85,7 +90,7 @@ export default function Index() {
             >
               <Avatar size="xl" name="Noel Gomez" src="/img/gomezn.jpeg" filter="brightness(1.2) grayscale(1)" />
               <Heading size="md" fontWeight="extrabold" letterSpacing="tight" my={3}>Noel Gomez</Heading>
-              <Text fontSize="small" textAlign="center">Co-founded <Link color={linkColor[colorMode]} href="https://ninecoves.com">Ninecoves</Link> to help companies quickly create a DataOps foundation, +12 years building data driven apps in large enterprises.</Text>
+              <Text fontSize="small" textAlign="center">Co-founded <Link isExternal color={linkColor[colorMode]} href="https://ninecoves.com">Ninecoves</Link> to help companies quickly create a DataOps foundation, +12 years building data driven apps in large enterprises.</Text>
             </Flex>
             <Flex
               direction="column"
@@ -102,7 +107,7 @@ export default function Index() {
             >
               <Avatar size="xl" name="Michael Kahan" src="/img/mkahan.jpeg" filter="brightness(1.2) grayscale(1)" />
               <Heading size="md" fontWeight="extrabold" letterSpacing="tight" my={3}>Michael Kahan</Heading>
-              <Text fontSize="small" textAlign="center">Founder of <Link color={linkColor[colorMode]} href="https://www.kahandatasolutions.com/">Kahan Data Solutions</Link> and regularly creates content on Youtube to help aspiring data professionals learn data technologies.</Text>
+              <Text fontSize="small" textAlign="center">Founder of <Link isExternal color={linkColor[colorMode]} href="https://www.kahandatasolutions.com/">Kahan Data Solutions</Link> and regularly creates content on <Link isExternal color={linkColor[colorMode]} href="https://www.youtube.com/c/KahanDataSolutions/playlists">Youtube</Link> to help aspiring data professionals learn data technologies.</Text>
             </Flex>
             <Flex
               direction="column"
@@ -119,7 +124,7 @@ export default function Index() {
             >
               <Avatar size="xl" name="Sebastian Sassi" src="/img/ssassi.jpeg" filter="grayscale(1)" />
               <Heading size="md" fontWeight="extrabold" letterSpacing="tight" my={3}>Sebastian Sassi</Heading>
-              <Text fontSize="small" textAlign="center">Co-founded <Link color={linkColor[colorMode]} href="https://convexa.ai">Convexa</Link> to help companies deliver actionable insights via NLP and voice assistants, +15 years building web and mobile apps.</Text>
+              <Text fontSize="small" textAlign="center">Co-founded <Link isExternal color={linkColor[colorMode]} href="https://convexa.ai">Convexa</Link> to help companies deliver actionable insights via NLP and voice assistants, +15 years building web and mobile apps.</Text>
             </Flex>
           </Stack>
         </Flex>
