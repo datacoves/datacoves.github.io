@@ -14,11 +14,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
       - name: Install deps
-        run: npm ci
+        run: yarn install --frozen-lockfile
       - name: Build website
         run: |
-          npm next build
-          npm next export
+          yarn next build
+          yarn next export
           touch out/.nojekyll
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           gh-pages -t -d out -u github-actions-bot <support+actions@github.com>
