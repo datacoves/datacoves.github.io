@@ -21,4 +21,4 @@ jobs:
           yarn next export
           touch out/.nojekyll
           git remote set-url origin "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          gh-pages -t -d out -u "github-actions-bot <support+actions@github.com>"
+          yarn gh-pages -t -d out -u "github-actions-bot <support+actions@github.com>"
