@@ -31,6 +31,10 @@ export default function Index() {
     light: 'blue',
     dark: 'gray.100'
   }
+  const mainButtonColor = {
+    light: 'black',
+    dark: 'whiteAlpha.200'
+  }
   const boxShadowColor = {
     light: '0px 8px 26px rgba(0, 0, 0, 0.1)',
     dark: '0px 8px 26px rgba(0, 0, 0, 0.9)'
@@ -57,7 +61,7 @@ export default function Index() {
           <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">Building a data stack based on solid foundations is an evergrowing challenge. Let's connect the leading data tools while promoting DataOps best practices 💪</Text>
 
           <HStack margin="auto" mt={10} mb={10} spacing={5}>
-            <Button as="a" href="https://github.com/datacoves" bg="black" color="white" fontWeight="500" px={6} border="1px solid black" _hover={{backgroundColor: "white", color: "black"}}>Start with dbt-coves</Button>
+            <Button as="a" href="https://github.com/datacoves" bg={mainButtonColor[colorMode]} color="white" fontWeight="500" px={6} border="1px solid black" _hover={{backgroundColor: "white", color: "black"}}>Start with dbt-coves</Button>
             <Button as="a" href="https://github.com/datacoves" variant="outline" fontWeight="500" px={6}><GithubIcon boxSize={5} color={iconColor[colorMode]} mr={2} />GitHub repos</Button>
           </HStack>
           <Text width="100%" align="center" mb={20}>License: MIT</Text>
