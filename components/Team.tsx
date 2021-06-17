@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import {
     useColorMode,
     Heading,
@@ -8,7 +7,6 @@ import {
     Avatar,
     Link
 } from '@chakra-ui/react'
-import { profile } from 'console'
 
 
 export default function Team() {
@@ -26,7 +24,7 @@ export default function Team() {
             name: 'Noel Gomez',
             image: 'gomezn.jpeg',
             bio: <>
-            Co - founded < Link isExternal color={ linkColor[colorMode]} href="https://ninecoves.com" > Ninecoves</Link> to help companies quickly create a DataOps foundation, +12 years building data driven apps in large enterprises.
+                Co-founded < Link isExternal color={ linkColor[colorMode]} href="https://ninecoves.com" > Ninecoves</Link> to help companies quickly create a DataOps foundation, +12 years building data driven apps in large enterprises.
             </>
         },
         {
@@ -34,14 +32,14 @@ export default function Team() {
             image: 'mkahan.jpeg',
             bio: <>
                 Founder of <Link isExternal color={linkColor[colorMode]} href="https://www.kahandatasolutions.com/">Kahan Data Solutions</Link> and regularly creates content on <Link isExternal color={linkColor[colorMode]} href="https://www.youtube.com/c/KahanDataSolutions/playlists">Youtube</Link> to help aspiring data professionals learn data technologies.
-                </>
+            </>
         },
         {
             name: 'Sebastian Sassi',
             image: 'ssassi.jpeg',
             bio: <>
                 Co-founded <Link isExternal color={linkColor[colorMode]} href="https://convexa.ai">Convexa</Link> to help companies deliver actionable insights via NLP and voice assistants, +15 years building web and mobile apps.
-                </>
+            </>
         }
     ]
     return (

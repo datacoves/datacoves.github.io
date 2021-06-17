@@ -13,7 +13,7 @@ const GlobalStyle = ({ children }) => {
         <>
             <Global
                 styles={css`
-          @import url('https://fonts.googleapis.com/css2?family=Inter:400,500,700,800,800');
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
           ::selection {
             background-color: #90CDF4;
             color: #fefefe;
