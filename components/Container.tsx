@@ -5,21 +5,19 @@ import {
     Flex,
     Box,
     HStack,
-    Tooltip,
-    IconButton
+    Tooltip
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import styled from '@emotion/styled'
 
 import DarkModeSwitch from '../components/DarkModeSwitch'
 import { Logo } from '../components/Logo'
-import { GithubIcon } from '../components/icons/Github'
 
 const Container = ({ children }) => {
     const { colorMode } = useColorMode()
 
     const bgColor = {
-        light: 'white',
+        light: 'hsla(0,0%,100%,0.8)',
         dark: '#171717'
     }
 
@@ -37,7 +35,7 @@ const Container = ({ children }) => {
         position: sticky;
         z-index: 10;
         top: 0;
-        backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(5px);
         transition: height .5s, line-height .5s;
         `
 
@@ -64,9 +62,6 @@ const Container = ({ children }) => {
                     </NextLink>
                 </Box>
                 <HStack spacing={2}>
-                    {/* <Tooltip label="Github" hasArrow aria-label="GitHub link">
-                        <IconButton aria-label="GitHub link" target="_blank" as="a" href="https://github.com/datacoves" icon={<GithubIcon boxSize={5} color={color[colorMode]} />} />
-                    </Tooltip> */}
                     <Tooltip label="Toggle Dark mode" hasArrow aria-label="Toggle Dark Mode"><Box><DarkModeSwitch /></Box></Tooltip>
                 </HStack>
             </StickyNav >

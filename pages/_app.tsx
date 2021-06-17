@@ -2,7 +2,6 @@ import React from 'react'
 import { ChakraProvider, ColorModeProvider, useColorMode } from '@chakra-ui/react'
 import customTheme from '../styles/theme'
 import { Global, css } from '@emotion/react'
-import { prismLightTheme, prismDarkTheme } from '../styles/prism'
 import { DefaultSeo } from 'next-seo'
 import SEO from '../next-seo.config'
 
@@ -14,7 +13,7 @@ const GlobalStyle = ({ children }) => {
         <>
             <Global
                 styles={css`
-          ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
+          @import url('https://fonts.googleapis.com/css2?family=Inter:400,500,700,800,800');
           ::selection {
             background-color: #90CDF4;
             color: #fefefe;

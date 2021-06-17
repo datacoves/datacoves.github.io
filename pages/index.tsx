@@ -1,21 +1,16 @@
-import Head from 'next/head'
 import {
   useColorMode,
   Heading,
   Text,
-  Box,
   Flex,
   Stack,
-  SimpleGrid,
-  HStack,
-  Divider,
-  Avatar,
-  Link,
   Button
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
 import { GithubIcon } from '../components/icons/Github'
+import Team from '../components/Team'
+
 
 export default function Index() {
   const { colorMode } = useColorMode()
@@ -27,17 +22,9 @@ export default function Index() {
     light: 'gray.600',
     dark: 'gray.300'
   }
-  const linkColor = {
-    light: 'blue',
-    dark: 'gray.100'
-  }
   const mainButtonColor = {
     light: 'black',
     dark: 'whiteAlpha.200'
-  }
-  const boxShadowColor = {
-    light: '0px 8px 26px rgba(0, 0, 0, 0.1)',
-    dark: '0px 8px 26px rgba(0, 0, 0, 0.9)'
   }
   return (
     <Container>
@@ -60,68 +47,16 @@ export default function Index() {
           <Heading mb={2} textAlign="center" fontSize={["3xl", "5xl", "6xl", "7xl"]} letterSpacing="tighter" fontWeight="extrabold">Deliver reliable insights to production <i>faster</i> </Heading>
           <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">Setting up an Analytics Engineer's development environment is hard and having them apply DataOps best practices is even harder. Let's change that 💪</Text>
 
-          <HStack margin="auto" mt={10} mb={10} spacing={5}>
+          <Stack margin="auto" direction={{ base: 'column', lg: 'row' }} mt={10} mb={10} spacing={5}>
             <Button as="a" href="https://github.com/datacoves" bg={mainButtonColor[colorMode]} color="white" fontWeight="500" px={6} border="1px solid black" _hover={{backgroundColor: "white", color: "black"}}>Start with dbt-coves</Button>
             <Button as="a" href="https://github.com/datacoves" variant="outline" fontWeight="500" px={6}><GithubIcon boxSize={5} color={iconColor[colorMode]} mr={2} />GitHub repos</Button>
-          </HStack>
+          </Stack>
           <Text width="100%" align="center" mb={20}>License: MIT</Text>
 
           <Heading mt={20} mb={2} letterSpacing="tight" size="xl" fontWeight={700} as="h2" textAlign="center" w="100%">Who we are</Heading>
-          <Text width="100%" align="center" mb={10}>We're on a mission to make the Analytics Engineer's life easier and help them implement DataOps.</Text>
+          <Text width="100%" align="center" px={10} mb={10}>We're on a mission to make the Analytics Engineer's life easier and help them implement DataOps.</Text>
 
-          <Stack spacing={10} my={20} w="100%" direction={{base: 'column', lg: 'row'}} alignItems="center">
-            <Flex
-              direction="column"
-              alignItems="center"
-              maxW="400px"
-              rounded="md"
-              padding="8"
-              position="relative"
-              shadow={'md'}
-              transition="all 0.1s"
-              _hover={{
-                boxShadow: boxShadowColor[colorMode],
-              }}
-            >
-              <Avatar size="xl" name="Noel Gomez" src="/img/gomezn.jpeg" filter="brightness(1.2) grayscale(1)" />
-              <Heading size="md" fontWeight="extrabold" letterSpacing="tight" my={3}>Noel Gomez</Heading>
-              <Text fontSize="small" textAlign="center">Co-founded <Link isExternal color={linkColor[colorMode]} href="https://ninecoves.com">Ninecoves</Link> to help companies quickly create a DataOps foundation, +12 years building data driven apps in large enterprises.</Text>
-            </Flex>
-            <Flex
-              direction="column"
-              alignItems="center"
-              maxW="400px"
-              rounded="md"
-              padding="8"
-              position="relative"
-              shadow={'md'}
-              transition="all 0.1s"
-              _hover={{
-                boxShadow: boxShadowColor[colorMode],
-              }}
-            >
-              <Avatar size="xl" name="Michael Kahan" src="/img/mkahan.jpeg" filter="brightness(1.2) grayscale(1)" />
-              <Heading size="md" fontWeight="extrabold" letterSpacing="tight" my={3}>Michael Kahan</Heading>
-              <Text fontSize="small" textAlign="center">Founder of <Link isExternal color={linkColor[colorMode]} href="https://www.kahandatasolutions.com/">Kahan Data Solutions</Link> and regularly creates content on <Link isExternal color={linkColor[colorMode]} href="https://www.youtube.com/c/KahanDataSolutions/playlists">Youtube</Link> to help aspiring data professionals learn data technologies.</Text>
-            </Flex>
-            <Flex
-              direction="column"
-              alignItems="center"
-              maxW="400px"
-              rounded="md"
-              padding="8"
-              position="relative"
-              shadow={'md'}
-              transition="all 0.1s"
-              _hover={{
-                boxShadow: boxShadowColor[colorMode],
-              }}
-            >
-              <Avatar size="xl" name="Sebastian Sassi" src="/img/ssassi.jpeg" filter="grayscale(1)" />
-              <Heading size="md" fontWeight="extrabold" letterSpacing="tight" my={3}>Sebastian Sassi</Heading>
-              <Text fontSize="small" textAlign="center">Co-founded <Link isExternal color={linkColor[colorMode]} href="https://convexa.ai">Convexa</Link> to help companies deliver actionable insights via NLP and voice assistants, +15 years building web and mobile apps.</Text>
-            </Flex>
-          </Stack>
+          <Team />
         </Flex>
       </Stack>
     </Container>
