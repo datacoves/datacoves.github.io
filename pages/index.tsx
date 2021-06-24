@@ -48,10 +48,10 @@ export default function Index() {
           <Text color={colorSecondary[colorMode]} mt={5} mx={10} fontSize={["sm", "md", "lg", "xl"]} textAlign="center">Setting up an Analytics Engineer's development environment is hard and having them apply DataOps best practices is even harder. Let's change that 💪</Text>
 
           <Stack margin="auto" direction={{ base: 'column', lg: 'row' }} mt={10} mb={10} spacing={5}>
-            <Button as="a" href="https://github.com/datacoves" bg={mainButtonColor[colorMode]} color="white" fontWeight="500" px={6} border="1px solid black" _hover={{backgroundColor: "white", color: "black"}}>Start with dbt-coves</Button>
+            <Button as="a" href="https://pypi.org/project/dbt-coves/" bg={mainButtonColor[colorMode]} color="white" fontWeight="500" px={6} border="1px solid black" _hover={{backgroundColor: "white", color: "black"}}>Start with dbt-coves</Button>
             <Button as="a" href="https://github.com/datacoves" variant="outline" fontWeight="500" px={6}><GithubIcon boxSize={5} color={iconColor[colorMode]} mr={2} />GitHub repos</Button>
           </Stack>
-          <Text width="100%" align="center" mb={20}>License: MIT</Text>
+          <Text width="100%" align="center" mb={20}>License: Apache 2.0</Text>
 
           <Heading mt={20} mb={2} letterSpacing="tight" size="xl" fontWeight={700} as="h2" textAlign="center" w="100%">Who we are</Heading>
           <Text width="100%" align="center" px={10} mb={10}>We're on a mission to make the Analytics Engineer's life easier and help them implement DataOps.</Text>
